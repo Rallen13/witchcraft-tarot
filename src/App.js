@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { getAllCards } from "./Utils/apiCalls";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      cards: [],
+    };
+  }
+
+  componentDidMount() {
+    // default load data for mount
+    getAllCards().then((json) => {
+      console.log(json.cards);
+      this.setState({ cards: json.cards[0] });
+    });
+  }
+
+  render() {
+    return (
+      <main className="App">
+        <h1>Witchcraft Tarot</h1>
+        <section className="tarot-container">
+          <div className="tarot-card">
+            <h2>{this.state.cards.name}</h2>
+            <h2>{this.state.cards.type}</h2>
+            <h2>{this.state.cards.meaning_up}</h2>
+            <h2>{this.state.cards.meaning_rev}</h2>
+            <h2>{this.state.cards.desc}</h2>
+          </div>
+        </section>
+      </main>
+    );
+  }
 }
 
 export default App;
