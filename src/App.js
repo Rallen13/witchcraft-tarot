@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getAllCards } from "./Utils/apiCalls";
 
-function App() {
+const App = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -25,5 +25,5 @@ function App() {
       </section>
     </main>
   );
-}
+};
 export default App;
