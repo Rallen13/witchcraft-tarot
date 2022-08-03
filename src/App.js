@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { getAllCards } from "./Utils/apiCalls";
 
-function App() {
+const App = () => {
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    // default load data for mount
+    getAllCards().then((json) => {
+      setCards({ cards: json.cards[0] });
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <h1>Witchcraft Tarot</h1>
+      <section className="tarot-container">
+        <div className="tarot-card">
+          <h2>{cards.name}</h2>
+          <h2>{cards.type}</h2>
+          <h2>{cards.meaning_up}</h2>
+          <h2>{cards.meaning_rev}</h2>
+          <h2>{cards.desc}</h2>
+        </div>
+      </section>
+    </main>
   );
-}
-
+};
 export default App;
