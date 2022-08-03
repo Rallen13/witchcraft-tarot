@@ -7,20 +7,26 @@ const App = () => {
   useEffect(() => {
     // default load data for mount
     getAllCards().then((json) => {
-      setCards({ cards: json.cards[0] });
+      setCards(json.cards);
     });
   }, []);
+
+  const tarotCards = cards.map((card) => {
+    return <>
+      <h2>{card.name}</h2>
+      <p>{card.type}</p>
+      <p>{card.meaning_up}</p>
+      <p>{card.meaning_rev}</p>
+      <p>{card.desc}</p>
+    </>;
+  });
 
   return (
     <main className="App">
       <h1>Witchcraft Tarot</h1>
       <section className="tarot-container">
         <div className="tarot-card">
-          <h2>{cards.name}</h2>
-          <h2>{cards.type}</h2>
-          <h2>{cards.meaning_up}</h2>
-          <h2>{cards.meaning_rev}</h2>
-          <h2>{cards.desc}</h2>
+          {tarotCards}
         </div>
       </section>
     </main>
