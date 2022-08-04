@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "./components/Button/Button.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import { getAllCards } from "./utils/apiCalls";
 
@@ -20,6 +21,7 @@ const App = () => {
         <p>{card.meaning_up}</p>
         <p>{card.meaning_rev}</p>
         <p>{card.desc}</p>
+        <Button label="Test" onClick="null"/>
       </>
     );
   });
