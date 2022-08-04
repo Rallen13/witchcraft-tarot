@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navigation } from "./components/navigation";
+import { Navigation } from "./components/navigation/navigation.js";
 import { getAllCards } from "./utils/apiCalls";
 
 const App = () => {
