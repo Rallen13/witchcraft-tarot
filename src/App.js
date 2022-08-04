@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { getAllCards } from "./Utils/apiCalls";
+import Navigation from "./components/Navigation/Navigation.js";
+import { getAllCards } from "./utils/apiCalls";
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -7,21 +8,27 @@ const App = () => {
   useEffect(() => {
     // default load data for mount
     getAllCards().then((json) => {
-      setCards({ cards: json.cards[0] });
+      setCards(json.cards);
     });
   }, []);
 
+  const tarotCards = cards.map((card) => {
+    return (
+      <>
+        <h2>{card.name}</h2>
+        <p>{card.type}</p>
+        <p>{card.meaning_up}</p>
+        <p>{card.meaning_rev}</p>
+        <p>{card.desc}</p>
+      </>
+    );
+  });
+
   return (
     <main className="App">
-      <h1>Witchcraft Tarot</h1>
+      <Navigation />
       <section className="tarot-container">
-        <div className="tarot-card">
-          <h2>{cards.name}</h2>
-          <h2>{cards.type}</h2>
-          <h2>{cards.meaning_up}</h2>
-          <h2>{cards.meaning_rev}</h2>
-          <h2>{cards.desc}</h2>
-        </div>
+        <div className="tarot-card">{tarotCards}</div>
       </section>
     </main>
   );

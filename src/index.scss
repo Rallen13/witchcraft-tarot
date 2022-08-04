@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: "Forum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1e170c;
+  background-image: url(./assets/seamless_pattern-04.png);
+  background-size: 40%;
+  color: #ffffff;
+  cursor: url("./assets/hand.png"), auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2 {
+  font-family: "Creepster", cursive;
+}
+
+h3,
+h4 {
+  font-family: "Roboto Condensed", sans-serif;
+}
