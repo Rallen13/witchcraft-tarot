@@ -1,13 +1,21 @@
 .nav-container {
   display: flex;
-  flex-direction: row-wrap;
+  flex-direction: row;
+  align-items: baseline;
   justify-content: space-between;
+}
+
+.logo-container {
+  background-color: #a68b42;
 }
 
 .logo {
   font-family: "Creepster", cursive;
   font-size: 3rem;
-  background-color: #a68b42;
+}
+
+.logo-img {
+  height: 2.5rem;
 }
 
 .material-symbols-outlined {

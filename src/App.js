@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Navigation } from "./Components/navigation";
-import { getAllCards } from "./Utils/apiCalls";
+import { Navigation } from "./components/navigation";
+import { getAllCards } from "./utils/apiCalls";
 
 const App = () => {
   const [cards, setCards] = useState([]);
