@@ -1,0 +1,16 @@
+.nav-container {
+  display: flex;
+  flex-direction: row-wrap;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Creepster", cursive;
+  font-size: 3rem;
+  background-color: #a68b42;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 3rem;
+}
