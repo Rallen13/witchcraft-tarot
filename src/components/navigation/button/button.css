@@ -1,0 +1,13 @@
+.app-button {
+  border: 0.125rem solid #ffffff;
+  padding: 0.5rem;
+  background-color: #a68b42;
+  color: #ffffff;
+  font-weight: 700;
+  width: 13rem;
+  text-transform: uppercase;
+}
+
+.app-button:hover {
+  transform: scale(1.1);
+}
