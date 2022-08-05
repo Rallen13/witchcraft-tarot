@@ -3,12 +3,12 @@ import InstructionBlock from "../../components/InstructionBlock/InstructionBlock
 import LearnMore from "../../components/LearnMore/LearnMore";
 import Spacer from "../../components/Spacer/Spacer";
 
-const SpreadView = ({ heading, instructionHeading, instructionCopy }) => {
+const SpreadView = ({ heading, instructions }) => {
   return (
     <main className="view">
       <h2>{heading}</h2>
-      <InstructionBlock heading={instructionHeading}>
-        {instructionCopy}
+      <InstructionBlock heading={instructions.heading}>
+        {instructions.copy}
       </InstructionBlock>
       <Spacer />
       <LearnMore />
