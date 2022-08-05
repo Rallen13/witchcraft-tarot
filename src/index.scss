@@ -10,6 +10,7 @@ body {
   background-size: 40%;
   color: #ffffff;
   cursor: url("./assets/hand.png"), auto;
+  text-align: center;
 }
 
 code {
@@ -18,11 +19,16 @@ code {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Creepster", cursive;
 }
 
-h3,
-h4 {
+h4,
+button {
   font-family: "Roboto Condensed", sans-serif;
+}
+
+h1, h2, h3, h4, {
+  margin: 0;
 }

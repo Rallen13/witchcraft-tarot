@@ -3,13 +3,21 @@
   padding: 0.5rem;
   background-color: #a68b42;
   color: #ffffff;
-  font-weight: 700;
-  width: 13rem;
+  font-size: 1.25rem;
+  width: 100%;
+  height: 3rem;
+  margin: 0.5rem 0;
   text-transform: uppercase;
   cursor: url("./../../assets/hand.png"), auto;
-
 }
 
 .app-button:hover {
   transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .app-button {
+    width: 35%;
+    margin: 0.5rem;
+  }
 }

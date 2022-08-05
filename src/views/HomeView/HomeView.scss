@@ -1,0 +1,28 @@
+.view {
+  padding: 1.5rem;
+}
+
+.header {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.header-2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .view {
+    max-width: 900px;
+    margin: auto;
+
+    p {
+      max-width: 650px;
+      margin: 1.5rem auto;
+    }
+  }
+
+  .header {
+    font-size: 4rem;
+  }
+}
