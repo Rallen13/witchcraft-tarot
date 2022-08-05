@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Navigation.scss";
 import skull from "./../../assets/skull.png";
+import Menu from "../Menu/Menu";
 
 const Navigation = () => {
   return (
@@ -15,7 +16,8 @@ const Navigation = () => {
         </h1>
         <img src={skull} alt="skull" className="logo-img"></img>
       </div>
-      <span className="material-symbols-outlined menu">menu</span>
+      
+      <Menu />
     </nav>
   );
 };
