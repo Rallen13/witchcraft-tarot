@@ -1,0 +1,15 @@
+.error-background {
+  background-color: #1e170c;
+  background-image: url(./../../assets/seamless_pattern-04_3.jpg);
+  background-size: 90%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.error-view {
+  height: 55vh;
+}
