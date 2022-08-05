@@ -7,9 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #1e170c;
   background-image: url(./assets/seamless_pattern-04.png);
-  background-size: 40%;
+  background-size: 90%;
   color: #ffffff;
   cursor: url("./assets/hand.png"), auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
@@ -18,11 +21,58 @@ code {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Creepster", cursive;
 }
 
+h4,
+button,
+a {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1,
+h2,
 h3,
 h4 {
-  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.65rem;
+}
+
+a {
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #735d2b;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
 }

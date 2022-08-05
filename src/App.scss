@@ -1,0 +1,16 @@
+.view {
+  padding: 1.5rem;
+  flex: 1 0 auto;
+}
+
+@media (min-width: 768px) {
+  .view {
+    max-width: 900px;
+    margin: auto;
+
+    p {
+      max-width: 650px;
+      margin: 1.5rem auto;
+    }
+  }
+}
