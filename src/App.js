@@ -3,6 +3,7 @@ import { Button } from "./components/Button/Button.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import Routes from "./components/Routes/Routes.js";
 import { getAllCards } from "./utils/apiCalls";
+import './App.scss'
 
 const App = () => {
   const [cards, setCards] = useState([]);
