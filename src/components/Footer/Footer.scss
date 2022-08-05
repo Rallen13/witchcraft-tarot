@@ -1,0 +1,16 @@
+.footer {
+  background-color: #1e170c;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    padding: 2rem;
+
+    span {
+      size: 1rem;
+      padding-left: 0.25rem;
+    }
+  }
+}

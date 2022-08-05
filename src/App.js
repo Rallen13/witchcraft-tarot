@@ -3,7 +3,8 @@ import { Button } from "./components/Button/Button.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import Routes from "./components/Routes/Routes.js";
 import { getAllCards } from "./utils/apiCalls";
-import './App.scss'
+import "./App.scss";
+import { Footer } from "./components/Footer/Footer.js";
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -32,6 +33,7 @@ const App = () => {
     <main className="App">
       <Navigation />
       <Routes />
+      <Footer />
     </main>
   );
 };
