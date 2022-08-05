@@ -1,0 +1,33 @@
+.menu-container {
+  background-color: #fff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  // height: 100%;
+  flex: 1 0 auto;
+  z-index: 1200;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  top: 0;
+  outline: 0;
+  right: 0;
+  cursor: default;
+  padding: 1.5rem 0;
+}
+
+.menu-item {
+  color: #a68b42;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  color: #735d2b;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .menu-container {
+    right: 20%;
+  }
+}
