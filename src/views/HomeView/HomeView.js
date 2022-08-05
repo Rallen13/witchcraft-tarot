@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "../../components/Button/Button";
+import Button from "../../components/Button/Button";
 import InstructionBlock from "../../components/InstructionBlock/InstructionBlock";
 import Spacer from "../../components/Spacer/Spacer";
 import steps from "../../data/steps.json";
