@@ -37,8 +37,12 @@ const HomeView = () => {
       <h3>Before you begin</h3>
       <section>{stepsToBegin}</section>
       <Spacer />
-      <Button label="Daily Reading" />
-      <Button label="3-Card Spread" />
+      <Link to="/daily-reading">
+        <Button label="Daily Reading" />
+      </Link>
+      <Link to="/3-card-spread">
+        <Button label="3-Card Spread" />
+      </Link>
       <Spacer />
       <LearnMore />
     </main>

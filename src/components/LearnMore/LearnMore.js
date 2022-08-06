@@ -5,12 +5,12 @@ import "./LearnMore.scss";
 
 const LearnMore = () => {
   return (
-    <Link to="/explore">
-      <div className="learn-more">
-        <h4>Want to learn more about all the major & minor arcana cards?</h4>
+    <div className="learn-more">
+      <h4>Want to learn more about all the major & minor arcana cards?</h4>
+      <Link to="/explore">
         <Button label="Explore the Deck" className="learn-more-button"></Button>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
