@@ -8,14 +8,14 @@
   gap: 1.5rem;
   padding-top: 1.5rem;
 
-  .tarot-card {
+  a {
     width: 45%;
   }
 }
 
 @media (min-width: 768px) {
   .explore-container {
-    .tarot-card {
+    a {
       width: 30%
     }
   }

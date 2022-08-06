@@ -3,7 +3,8 @@ import InstructionBlock from "../../components/InstructionBlock/InstructionBlock
 import ErrorView from "../ErrorView/ErrorView";
 import { getAllCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
-import './ExploreView.scss';
+import "./ExploreView.scss";
+import { Link } from "react-router-dom";
 
 const ExploreView = () => {
   const [cards, setCards] = useState([]);
@@ -24,11 +25,13 @@ const ExploreView = () => {
 
   const renderCards = cards.map((card) => {
     return (
-      <img
-        src={require(`../../assets/cards/${card.name_short}.jpg`)}
-        alt={card.name}
-        className="tarot-card"
-      />
+      <Link to={`/explore/${card.name_short}`} className="card-link">
+        <img
+          src={require(`../../assets/cards/${card.name_short}.jpg`)}
+          alt={card.name}
+          className="tarot-card"
+        />
+      </Link>
     );
   });
 

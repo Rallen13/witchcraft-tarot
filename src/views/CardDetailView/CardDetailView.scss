@@ -1,0 +1,12 @@
+.card-detail-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+  .card-detail-container {
+    width: 50%;
+    margin: auto;
+  }
+}

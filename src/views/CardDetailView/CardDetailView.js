@@ -3,29 +3,40 @@ import InstructionBlock from "../../components/InstructionBlock/InstructionBlock
 import LearnMore from "../../components/LearnMore/LearnMore";
 import ErrorView from "../ErrorView/ErrorView";
 import CardSummary from "../../components/CardSummary/CardSummary";
-import { getRandomCards } from "../../utils/apiCalls";
+import { getSearchCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
-import "./DailyReadingView.scss";
+import Spacer from "../../components/Spacer/Spacer";
+import './CardDetailView.scss'
 
-const SpreadView = () => {
+const CardDetailView = (nameShort) => {
   const [cards, setCards] = useState([]);
   const [error, setError] = useState();
 
   useEffect(() => {
-    getSpreadCall();
+    getSingleCardCall();
   }, []);
 
-  const getSpreadCall = async () => {
-    const [res, err] = await executeAsync(() => getRandomCards(1));
+  const getSingleCardCall = async () => {
+    const [res, err] = await executeAsync(() =>
+      getSearchCards(nameShort.nameShort)
+    );
     if (err) {
       return setError(err);
     }
     setCards(res.cards);
+    console.log(nameShort);
     console.log(res);
   };
 
   const renderCards = cards.map((card) => {
-    return <CardSummary card={card} key={card.name} />;
+    return (
+      <>
+        <CardSummary card={card} key={card.name} explore={true} />
+        <InstructionBlock heading="description">
+          {card.desc}
+        </InstructionBlock>
+      </>
+    );
   });
 
   if (error) {
@@ -38,17 +49,14 @@ const SpreadView = () => {
 
   return (
     <main className="view">
-      <h2>Daily Reading</h2>
-      <InstructionBlock heading="Pick a card">
-        What does the future have in store for you? Now is time to discover the
-        day's possibilities!
-      </InstructionBlock>
-      <div className="card-container daily-card-container">
+      <h2>Card Details</h2>
+      <div className="card-detail-container">
         {!cards ? <h2>Shuffling Cards</h2> : renderCards}
       </div>
+      <Spacer />
       <LearnMore />
     </main>
   );
 };
 
-export default SpreadView;
+export default CardDetailView;
