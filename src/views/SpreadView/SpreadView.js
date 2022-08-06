@@ -3,12 +3,13 @@ import InstructionBlock from "../../components/InstructionBlock/InstructionBlock
 import LearnMore from "../../components/LearnMore/LearnMore";
 import Spacer from "../../components/Spacer/Spacer";
 import ErrorView from "../ErrorView/ErrorView";
+import CardSummary from "../../components/CardSummary/CardSummary";
 import { getRandomCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
 import { withRouter } from "react-router-dom";
 
 const SpreadView = () => {
-  const [cards, setCards] = useState();
+  const [cards, setCards] = useState([]);
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -23,6 +24,10 @@ const SpreadView = () => {
     setCards(res.cards);
     console.log(res);
   };
+
+  const renderCards = cards.map((card) => {
+    return <CardSummary card={card} key={card.name} />;
+  });
 
   if (error) {
     return (
@@ -43,7 +48,9 @@ const SpreadView = () => {
         potential partner), and the third as the relationship between you both.
         Just don't change the parameters of the inquiry mid-reading!
       </InstructionBlock>
-      <Spacer />
+      <div className="card-container">
+        {!cards ? <h2>Shuffling Cards</h2> : renderCards}
+      </div>
       <LearnMore />
     </main>
   );

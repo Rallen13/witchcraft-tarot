@@ -42,8 +42,7 @@ const SpreadView = () => {
     <main className="view">
       <h2>Daily Reading</h2>
       <InstructionBlock heading="Pick a card">
-        What does the future have in store for you? Now is time to discover the
-        day's possibilities!
+        What does the future have in store for you? Now is time to discover the day's possibilities! Click the card below to get your daily reading.
       </InstructionBlock>
       <div className="card-container">
         {!cards ? <h2>Shuffling Cards</h2> : renderCards}
