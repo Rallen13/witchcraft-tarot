@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import InstructionBlock from "../../components/InstructionBlock/InstructionBlock";
 import LearnMore from "../../components/LearnMore/LearnMore";
-import Spacer from "../../components/Spacer/Spacer";
 import ErrorView from "../ErrorView/ErrorView";
+import CardSummary from "../../components/CardSummary/CardSummary";
 import { getRandomCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
-import { withRouter } from "react-router-dom";
 import "./DailyReadingView.scss";
-import CardSummary from "../../components/CardSummary/CardSummary";
 
 const SpreadView = () => {
   const [cards, setCards] = useState([]);
@@ -42,7 +40,8 @@ const SpreadView = () => {
     <main className="view">
       <h2>Daily Reading</h2>
       <InstructionBlock heading="Pick a card">
-        What does the future have in store for you? Now is time to discover the day's possibilities! Click the card below to get your daily reading.
+        What does the future have in store for you? Now is time to discover the
+        day's possibilities! Click the card below to get your daily reading.
       </InstructionBlock>
       <div className="card-container daily-card-container">
         {!cards ? <h2>Shuffling Cards</h2> : renderCards}
@@ -52,4 +51,4 @@ const SpreadView = () => {
   );
 };
 
-export default withRouter(SpreadView);
+export default SpreadView;

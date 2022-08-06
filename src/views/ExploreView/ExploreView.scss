@@ -1,0 +1,22 @@
+.explore-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+
+  .tarot-card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .explore-container {
+    .tarot-card {
+      width: 30%
+    }
+  }
+}
