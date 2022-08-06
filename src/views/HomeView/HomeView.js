@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "../../components/Button/Button";
 import InstructionBlock from "../../components/InstructionBlock/InstructionBlock";
+import LearnMore from "../../components/LearnMore/LearnMore";
 import Spacer from "../../components/Spacer/Spacer";
 import steps from "../../data/steps.json";
 
@@ -33,6 +34,8 @@ const HomeView = () => {
       <Spacer />
       <Button label="Daily Reading" />
       <Button label="3-Card Spread" />
+      <Spacer />
+      <LearnMore />
     </main>
   );
 };

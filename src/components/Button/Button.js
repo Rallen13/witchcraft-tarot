@@ -1,12 +1,8 @@
 import * as React from "react";
 import "./Button.scss";
 
-const Button = ({ label, onClick }) => {
-  return (
-    <button onClick={onClick} className="app-button">
-      {label}
-    </button>
-  );
+const Button = ({ label }) => {
+  return <button className="app-button">{label}</button>;
 };
 
 export default Button;
