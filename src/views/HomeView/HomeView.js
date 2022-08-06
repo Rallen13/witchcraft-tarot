@@ -4,6 +4,7 @@ import InstructionBlock from "../../components/InstructionBlock/InstructionBlock
 import LearnMore from "../../components/LearnMore/LearnMore";
 import Spacer from "../../components/Spacer/Spacer";
 import steps from "../../data/steps.json";
+import { Link } from "react-router-dom";
 
 const HomeView = () => {
   const stepsToBegin = steps.map((step, index) => {
@@ -26,14 +27,22 @@ const HomeView = () => {
         psyched for all the possibilities—and avoid possible pitfalls. Get your
         reading and obtain insight for the day ahead!
       </p>
-      <Button label="Daily Reading" />
-      <Button label="3-Card Spread" />
+      <Link to="/daily-reading">
+        <Button label="Daily Reading" />
+      </Link>
+      <Link to="3-card-spread">
+        <Button label="3-Card Spread" />
+      </Link>
       <Spacer />
       <h3>Before you begin</h3>
       <section>{stepsToBegin}</section>
       <Spacer />
-      <Button label="Daily Reading" />
-      <Button label="3-Card Spread" />
+      <Link to="/daily-reading">
+        <Button label="Daily Reading" />
+      </Link>
+      <Link to="/3-card-spread">
+        <Button label="3-Card Spread" />
+      </Link>
       <Spacer />
       <LearnMore />
     </main>
