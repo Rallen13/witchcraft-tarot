@@ -6,9 +6,11 @@ import ErrorView from "../ErrorView/ErrorView";
 import { getRandomCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
 import { withRouter } from "react-router-dom";
+import "./DailyReadingView.scss";
+import CardSummary from "../../components/CardSummary/CardSummary";
 
 const SpreadView = () => {
-  const [cards, setCards] = useState();
+  const [cards, setCards] = useState([]);
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -16,13 +18,17 @@ const SpreadView = () => {
   }, []);
 
   const getSpreadCall = async () => {
-    const [res, err] = await executeAsync(() => getRandomCards(3));
+    const [res, err] = await executeAsync(() => getRandomCards(1));
     if (err) {
       return setError(err);
     }
     setCards(res.cards);
     console.log(res);
   };
+
+  const renderCards = cards.map((card) => {
+    return <CardSummary card={card} key={card.name} />;
+  });
 
   if (error) {
     return (
@@ -34,16 +40,14 @@ const SpreadView = () => {
 
   return (
     <main className="view">
-      <h2>3-Card Spread</h2>
-      <InstructionBlock heading="Pick Three Cards">
-        This spread may seem simple, but it's also very versatile. You can use
-        the cards to denote past, present, and future, or, situation, action,
-        and outcome. If you're doing a relationship reading, you can even
-        designate the first card as yourself, the second as your partner (or
-        potential partner), and the third as the relationship between you both.
-        Just don't change the parameters of the inquiry mid-reading!
+      <h2>Daily Reading</h2>
+      <InstructionBlock heading="Pick a card">
+        What does the future have in store for you? Now is time to discover the
+        day's possibilities!
       </InstructionBlock>
-      <Spacer />
+      <div className="card-container">
+        {!cards ? <h2>Shuffling Cards</h2> : renderCards}
+      </div>
       <LearnMore />
     </main>
   );

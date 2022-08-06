@@ -4,36 +4,19 @@ import HomeView from "../../views/HomeView/HomeView";
 import ExploreView from "../../views/ExploreView/ExploreView";
 import ErrorView from "../../views/ErrorView/ErrorView";
 import SpreadView from "../../views/SpreadView/SpreadView";
+import DailyReadingView from "../../views/DailyReadingView/DailyReadingView";
 
 const Routes = () => {
-  const threeCardSpreadInstructions = {
-    heading: "Pick Three Cards",
-    copy: "This spread may seem simple, but it's also very versatile. You can use the cards to denote past, present, and future, or, situation, action, and outcome. If you're doing a relationship reading, you can even designate the first card as yourself, the second as your partner (or potential partner), and the third as the relationship between you both. Just don't change the parameters of the inquiry mid-reading!",
-  };
-
-  const dailyReadingInstructions = {
-    heading: "Pick a card",
-    copy: "What does the future have in store for you? Now is time to discover the day's possibilities!",
-  };
-
   return (
     <Switch>
       <Route exact path="/explore">
         <ExploreView />
       </Route>
       <Route exact path="/daily-reading">
-        <SpreadView
-          heading="Daily Reading"
-          instructions={dailyReadingInstructions}
-          cardCount={1}
-        />
+        <DailyReadingView />
       </Route>
       <Route exact path="/3-card-spread">
-        <SpreadView
-          heading="3-Card Spread"
-          instructions={threeCardSpreadInstructions}
-          cardCount={3}
-        />
+        <SpreadView />
       </Route>
       <Route exact path="/">
         <HomeView />
