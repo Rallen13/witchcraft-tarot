@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import "./InstructionBlock.scss";
 
 const InstructionBlock = ({ heading, children }) => {
@@ -11,3 +12,8 @@ const InstructionBlock = ({ heading, children }) => {
 };
 
 export default InstructionBlock;
+
+InstructionBlock.propTypes = {
+  heading: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};

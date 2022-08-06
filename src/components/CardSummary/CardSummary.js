@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import InstructionBlock from "../InstructionBlock/InstructionBlock";
 import Spacer from "../Spacer/Spacer";
 import "./CardSummary.scss";
@@ -43,3 +44,7 @@ const CardSummary = ({ card }) => {
 };
 
 export default CardSummary;
+
+CardSummary.propTypes = {
+  card: PropTypes.object.isRequired,
+};

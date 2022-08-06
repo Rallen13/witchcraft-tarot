@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import InstructionBlock from "../../components/InstructionBlock/InstructionBlock";
 import LearnMore from "../../components/LearnMore/LearnMore";
-import Spacer from "../../components/Spacer/Spacer";
 import ErrorView from "../ErrorView/ErrorView";
 import CardSummary from "../../components/CardSummary/CardSummary";
 import { getRandomCards } from "../../utils/apiCalls";
