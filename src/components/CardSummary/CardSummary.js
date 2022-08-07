@@ -47,9 +47,9 @@ export default CardSummary;
 
 CardSummary.propTypes = {
   card: PropTypes.object.isRequired,
-  explore: PropTypes.bool
+  explore: PropTypes.bool,
 };
 
 CardSummary.defaultProps = {
-  explore: false
+  explore: false,
 };

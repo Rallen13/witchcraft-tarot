@@ -7,7 +7,7 @@ import { getRandomCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
 import "./DailyReadingView.scss";
 
-const SpreadView = () => {
+const DailyReadingView = () => {
   const [cards, setCards] = useState([]);
   const [error, setError] = useState();
 
@@ -51,4 +51,4 @@ const SpreadView = () => {
   );
 };
 
-export default SpreadView;
+export default DailyReadingView;
