@@ -37,12 +37,12 @@ const DailyReadingView = () => {
 
   return (
     <main className="view">
-      <h2>Daily Reading</h2>
+      <h2 data-cy="daily-reading-view-heading">Daily Reading</h2>
       <InstructionBlock heading="Pick a card">
         What does the future have in store for you? Now is time to discover the
         day's possibilities!
       </InstructionBlock>
-      <div className="card-container daily-card-container">
+      <div className="card-container daily-card-container" data-cy="daily-card-container">
         {!cards ? <h2>Shuffling Cards</h2> : renderCards}
       </div>
       <LearnMore />
