@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+![Screen Shot 2022-08-01 at 3 26 21 PM](https://user-images.githubusercontent.com/91972449/182253696-ccea403c-7bf4-4241-9808-c01c1322e552.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Technologies and Tools](#technologies-and-tools)
+- [Roadmap](#roadmap)
+- [Setup](#setup)
+- [Contributors](#contributors)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Everyone has bad days…PickMeUp is an application that provides an uplifting compliment and/or a solid piece of advice to put a smile on your face! Users have the opportunity to browse through a variety of compliments/advice as well as favorite their most liked! 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The stretch technology we chose as a group was TypeScript. TypeScript is an increasingly popular programming language and many employers are seeking TypeScript experience. The key augmentation TypeScript brings to JavaScript is a type system (hence the name “TypeScript”). Below are just a few benefits of using TypeScript in React:
 
-### `npm test`
+- Readable, easily understandable code
+- Interfaces
+- Better support for JSX
+- Easier debugging while writing code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Throughout this project, we took full advantage of React’s modular nature by creating dynamically rendered components and views. This helped us keep the app small yet provided the user with a pleasant experience. We implemented thoughtful architecture through the use of shared utilities, global extendable interfaces, and views. We implemented Local Storage to store our favorite compliments and pieces of advice. We styled the app using shared classes that reduced the amount of repeated CSS throughout the app as well as applying media queries to make everything mobile responsive. We recognized the value of typescript while working through the functionality and feel confident in the product we created.
 
-### `npm run build`
+## Learning Goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Continue to gain competency with React Fundamentals
+- Create a multi-page UX using Router
+- Practice refactoring class based components to use react hooks
+- Continue to learn how to test React components & asynchronous JS
+- End to end testing with Cypress
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Our application includes the following core functionality:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Displays the data from the API in a way that applies directly to our audience
+- Ability for users to store/manipulate the data displayed in the application, such as filtering on the Explore The Deck view by major arcana and minor suits
+- Multiple views handled by Router
+- App deployment using Heroku
 
-### `npm run eject`
+## Planning Documents
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[MVP proposal](https://docs.google.com/document/d/1eDzOwcUQOxsWh6uXOyawd2NmG0x2y0A1H9xh6m3zs7s/edit)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Design Inspo](https://docs.google.com/document/d/1iDrh_PzEPID617UXV8rjnBhG76k7Y7-3BH_rHk6suMc/edit)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[Wireframes](https://drive.google.com/file/d/19KhIxJ7ZgmV0XLT8SNrTL9Igll_3zSd1/view?ths=true)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-## Learn More
+## Illustrations
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Deployed Link](https://witchcraft-tarot.herokuapp.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Functionality Video](https://vimeo.com/737356776/23ad10896c)
 
-### Code Splitting
+## Technologies and Tools
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- JavaScript
+- TypeScript
+- React
+- React Router
+- HTML
+- CSS
+- Cypress
+- Mocha
+- Chai
+- Fetch API
+- NPM
+- Webpack
+- Heroku
 
-### Analyzing the Bundle Size
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Future features could include:
 
-### Making a Progressive Web App
+- Add functionality to allow a users to add/post personalized compliments or advice
+- Add feature to connect with other users and send compliments or advice
+- Include images or music to enhance user experience
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Setup to Run Locally
 
-### Advanced Configuration
+1. Fork and clone this repository
+2. Cd into the root directory and run `npm i`
+3. To run this server, run `npm start` in the terminal and React will start the development server. To stop the local server, use command `Control + C`.
+4. Open a browser window and go to http://localhost:3000 to view the website
+5. To run the testing suite, run `npm run cypress` and Cypress will open up.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Rachel Allen**
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [LinkedIn](https://www.linkedin.com/in/rachel-lynn-allen/)
+- [GitHub](https://github.com/Rallen13)
