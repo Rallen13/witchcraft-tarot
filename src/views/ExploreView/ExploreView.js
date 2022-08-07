@@ -49,6 +49,7 @@ const ExploreView = () => {
         to={`/explore/${card.name_short}`}
         className="card-link"
         key={card.name_short}
+        data-cy="card-link"
       >
         <img
           src={require(`../../assets/cards/${card.name_short}.jpg`)}
@@ -69,7 +70,7 @@ const ExploreView = () => {
 
   return (
     <main className="view">
-      <h2>Explore The Deck</h2>
+      <h2 data-cy="explore-view-heading">Explore The Deck</h2>
       <InstructionBlock heading="MAJOR & MINOR ARCANA TAROT CARD MEANINGS">
         Learn what each card of the tarot deck means—the major arcana, the minor
         arcana, they're all here.
@@ -86,6 +87,7 @@ const ExploreView = () => {
             value="major"
             aria-label="major arcana"
             className="toggle-button"
+            data-cy="major"
           >
             Major
           </ToggleButton>
@@ -93,6 +95,7 @@ const ExploreView = () => {
             value="pentacles"
             aria-label="pentacles suit"
             className="toggle-button"
+            data-cy="pentacles"
           >
             Pentacles
           </ToggleButton>
@@ -100,6 +103,7 @@ const ExploreView = () => {
             value="swords"
             aria-label="sword suit"
             className="toggle-button"
+            data-cy="swords"
           >
             Swords
           </ToggleButton>
@@ -107,6 +111,7 @@ const ExploreView = () => {
             value="cups"
             aria-label="cup suit"
             className="toggle-button"
+            data-cy="cups"
           >
             Cups
           </ToggleButton>
@@ -114,12 +119,13 @@ const ExploreView = () => {
             value="wands"
             aria-label="wand suit"
             className="toggle-button"
+            data-cy="wands"
           >
             Wands
           </ToggleButton>
         </ToggleButtonGroup>
       </div>
-      <div className="explore-container">
+      <div className="explore-container" data-cy="explore-container">
         {!cards ? <h2>Shuffling Cards</h2> : renderCards}
       </div>
     </main>

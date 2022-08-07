@@ -9,7 +9,7 @@ const Navigation = () => {
     <nav className="nav-container">
       <Link to="/" className="logo-link">
         <div className="logo-container">
-          <h1 className="logo">
+          <h1 className="logo" data-cy="logo">
             Witch
             <br />
             Craft

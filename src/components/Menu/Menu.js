@@ -48,6 +48,7 @@ export default function Menu() {
       <span
         className="material-symbols-outlined menu"
         onClick={toggleDrawer("right", true)}
+        data-cy="menu"
       >
         menu
       </span>
@@ -56,6 +57,7 @@ export default function Menu() {
         open={state["right"]}
         onClose={toggleDrawer("right", false)}
         onOpen={toggleDrawer("right", true)}
+        data-cy="swipeable-drawer"
       >
         {list()}
       </SwipeableDrawer>

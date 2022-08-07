@@ -4,7 +4,7 @@ import spacer from "./../../assets/white_illustration-19 copy.png";
 
 const Spacer = () => {
   return (
-    <div>
+    <div data-cy="spacer">
       <img src={spacer} alt="spacer illustration of stars" className="spacer" />
     </div>
   );

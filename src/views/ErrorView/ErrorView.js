@@ -6,7 +6,7 @@ const ErrorView = ({ error }) => {
   return (
     <>
       <main className="view error-view">
-        <h2 className="error-heading">
+        <h2 className="error-heading" data-cy="error-heading">
           I bind you from accessing this page, from doing harm...
         </h2>
         <h2 className="error-heading">

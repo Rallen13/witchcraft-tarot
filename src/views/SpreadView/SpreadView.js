@@ -37,7 +37,7 @@ const SpreadView = () => {
 
   return (
     <main className="view">
-      <h2>3-Card Spread</h2>
+      <h2 data-cy="3-card-spread-view-heading">3-Card Spread</h2>
       <InstructionBlock heading="Pick Three Cards">
         This spread may seem simple, but it's also very versatile. You can use
         the cards to denote past, present, and future, or, situation, action,
@@ -46,7 +46,7 @@ const SpreadView = () => {
         potential partner), and the third as the relationship between you both.
         Just don't change the parameters of the inquiry mid-reading!
       </InstructionBlock>
-      <div className="card-container">
+      <div className="card-container" data-cy="card-container">
         {!cards ? <h2>Shuffling Cards</h2> : renderCards}
       </div>
       <LearnMore />
