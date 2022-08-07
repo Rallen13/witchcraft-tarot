@@ -45,8 +45,8 @@ const CardDetailView = ({ nameShort }) => {
 
   return (
     <main className="view">
-      <h2>Card Details</h2>
-      <div className="card-detail-container">
+      <h2 data-cy="card-detail-view-heading">Card Details</h2>
+      <div className="card-detail-container" data-cy="card-detail-container">
         {!cards ? <h2>Shuffling Cards</h2> : renderCards}
       </div>
       <Spacer />
