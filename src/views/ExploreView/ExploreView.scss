@@ -1,0 +1,41 @@
+.explore-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+
+  a {
+    width: 45%;
+  }
+}
+
+.toggle-button {
+  font-size: 2.75vw !important;
+  color: #ffffff !important;
+  background-color: #735d2b !important;
+  cursor: url("../../assets/hand.png"), auto !important;
+}
+
+.toggle-button:hover {
+  background-color: #a68b42 !important;
+}
+
+.Mui-selected {
+  background-color: #a68b42 !important;
+  border: solid 2px #ffffff !important;
+}
+
+@media (min-width: 768px) {
+  .explore-container {
+    a {
+      width: 30%;
+    }
+  }
+  .toggle-button {
+    font-size: 0.875rem !important;
+  }
+}

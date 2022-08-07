@@ -11,3 +11,10 @@ export const getRandomCards = async (cardCount) => {
   const response = await fetch(URL, { method: "GET" });
   return await response.json();
 };
+
+export const getSearchCards = async (query) => {
+  const URL = `https://rws-cards-api.herokuapp.com/api/v1/cards/search?q=${query}`;
+
+  const response = await fetch(URL, { method: "GET" });
+  return await response.json();
+};

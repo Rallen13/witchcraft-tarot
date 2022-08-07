@@ -5,8 +5,8 @@ import InstructionBlock from "../InstructionBlock/InstructionBlock";
 import Spacer from "../Spacer/Spacer";
 import "./CardSummary.scss";
 
-const CardSummary = ({ card }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const CardSummary = ({ card, explore }) => {
+  const [isFlipped, setIsFlipped] = useState(explore);
 
   const onCardClick = () => {
     setIsFlipped(true);
@@ -47,4 +47,9 @@ export default CardSummary;
 
 CardSummary.propTypes = {
   card: PropTypes.object.isRequired,
+  explore: PropTypes.bool,
+};
+
+CardSummary.defaultProps = {
+  explore: false,
 };
