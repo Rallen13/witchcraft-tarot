@@ -8,22 +8,22 @@ import { getSearchCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
 import Spacer from "../../components/Spacer/Spacer";
 import "./CardDetailView.scss";
+import { useLocation } from "react-router-dom";
 
 const CardDetailView = ({ nameShort }) => {
   const [cards, setCards] = useState([]);
   const [error, setError] = useState();
 
   useEffect(() => {
+    const getSingleCardCall = async () => {
+      const [res, err] = await executeAsync(() => getSearchCards(nameShort));
+      if (err) {
+        return setError(err);
+      }
+      setCards(res.cards);
+    };
     getSingleCardCall();
-  }, []);
-
-  const getSingleCardCall = async () => {
-    const [res, err] = await executeAsync(() => getSearchCards(nameShort));
-    if (err) {
-      return setError(err);
-    }
-    setCards(res.cards);
-  };
+  }, [nameShort]);
 
   const renderCards = cards.map((card) => {
     return (
