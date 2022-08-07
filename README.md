@@ -1,4 +1,4 @@
-![Screen Shot 2022-08-01 at 3 26 21 PM](https://user-images.githubusercontent.com/91972449/182253696-ccea403c-7bf4-4241-9808-c01c1322e552.png)
+<img width="132" alt="Screen Shot 2022-08-07 at 2 17 37 PM" src="https://user-images.githubusercontent.com/98505112/183309565-2e99ef88-605b-43e6-927a-47882f14b41d.png">
 
 
 ## Table of Contents
@@ -12,16 +12,9 @@
 
 ## Project Overview
 
-Everyone has bad days…PickMeUp is an application that provides an uplifting compliment and/or a solid piece of advice to put a smile on your face! Users have the opportunity to browse through a variety of compliments/advice as well as favorite their most liked! 
+Starting each day with a Tarot reading is a terrific way to get psyched for all the possibilities—and avoid possible pitfalls that the day may bring. WitchCraft Tarot helps you get your daily reading in order to obtain insight for the day ahead! It also allows you to get your 3-Card Spread reading in order to obtain insight about past, present, and future, or, situation, action, and outcome. Or, if you're doing a relationship reading, you can even designate the first card as yourself, the second as your partner (or potential partner), and the third as the relationship between you both. Additonally, users have the opportunity to explore the entire deck on the Explore The Deck View and filter the deck by major arcana or the minor suits (pentacles, swords, wands, and cups.
 
-The stretch technology we chose as a group was TypeScript. TypeScript is an increasingly popular programming language and many employers are seeking TypeScript experience. The key augmentation TypeScript brings to JavaScript is a type system (hence the name “TypeScript”). Below are just a few benefits of using TypeScript in React:
-
-- Readable, easily understandable code
-- Interfaces
-- Better support for JSX
-- Easier debugging while writing code
-
-Throughout this project, we took full advantage of React’s modular nature by creating dynamically rendered components and views. This helped us keep the app small yet provided the user with a pleasant experience. We implemented thoughtful architecture through the use of shared utilities, global extendable interfaces, and views. We implemented Local Storage to store our favorite compliments and pieces of advice. We styled the app using shared classes that reduced the amount of repeated CSS throughout the app as well as applying media queries to make everything mobile responsive. We recognized the value of typescript while working through the functionality and feel confident in the product we created.
+Throughout this project, I took full advantage of React’s modular nature by creating dynamically rendered components and views. This helped us keep the app small yet provided the user with a pleasant experience. We implemented thoughtful architecture through the use of shared utilities and views. We implemented Local Storage to store our favorite compliments and pieces of advice. We styled the app using shared classes that reduced the amount of repeated CSS throughout the app as well as applying media queries to make everything mobile responsive. We recognized the value of typescript while working through the functionality and feel confident in the product we created.
 
 ## Learning Goals
 
@@ -57,14 +50,12 @@ Our application includes the following core functionality:
 ## Technologies and Tools
 
 - JavaScript
-- TypeScript
 - React
 - React Router
 - HTML
 - CSS
+- SASS
 - Cypress
-- Mocha
-- Chai
 - Fetch API
 - NPM
 - Webpack
@@ -74,9 +65,9 @@ Our application includes the following core functionality:
 
 Future features could include:
 
-- Add functionality to allow a users to add/post personalized compliments or advice
-- Add feature to connect with other users and send compliments or advice
-- Include images or music to enhance user experience
+- Add functionality to allow a user to favorite meaningful spreads
+- Add feature to connect with other users and share spreads with friends
+- Add login functionality 
 
 ## Setup to Run Locally
 
