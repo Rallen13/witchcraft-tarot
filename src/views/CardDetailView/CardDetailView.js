@@ -8,7 +8,6 @@ import { getSearchCards } from "../../utils/apiCalls";
 import { executeAsync } from "../../utils/errorHandler";
 import Spacer from "../../components/Spacer/Spacer";
 import "./CardDetailView.scss";
-import { useLocation } from "react-router-dom";
 
 const CardDetailView = ({ nameShort }) => {
   const [cards, setCards] = useState([]);

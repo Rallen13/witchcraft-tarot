@@ -34,7 +34,6 @@ const ExploreView = () => {
       return setError(err);
     }
     setCards(res.cards);
-    console.log(res);
   };
 
   //eventhandler for MUI toggle button group from docs

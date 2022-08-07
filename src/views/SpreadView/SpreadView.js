@@ -21,7 +21,6 @@ const SpreadView = () => {
       return setError(err);
     }
     setCards(res.cards);
-    console.log(res);
   };
 
   const renderCards = cards.map((card) => {

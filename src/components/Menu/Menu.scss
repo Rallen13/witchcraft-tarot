@@ -3,7 +3,6 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  // height: 100%;
   flex: 1 0 auto;
   z-index: 1200;
   -webkit-overflow-scrolling: touch;
@@ -11,6 +10,7 @@
   top: 0;
   outline: 0;
   right: 0;
+  width: 225px;
   cursor: default;
   padding: 1.5rem 0;
 }
