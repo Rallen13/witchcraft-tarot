@@ -1,10 +1,11 @@
-import * as React from "react";
+import React, { useState } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import "./Menu.scss";
 
 export default function Menu() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     top: false,
     left: false,
     bottom: false,
@@ -24,7 +25,8 @@ export default function Menu() {
   };
 
   const list = () => (
-    <div
+    <Box
+      role="presentation"
       className="menu-container"
       onClick={toggleDrawer("right", false)}
       onKeyDown={toggleDrawer("right", false)}
@@ -38,7 +40,7 @@ export default function Menu() {
       <Link to="/3-card-spread">
         <h4 className="menu-item">3-Card Spread</h4>
       </Link>
-    </div>
+    </Box>
   );
 
   return (
