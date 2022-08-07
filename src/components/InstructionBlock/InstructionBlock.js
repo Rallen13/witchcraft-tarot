@@ -4,7 +4,7 @@ import "./InstructionBlock.scss";
 
 const InstructionBlock = ({ heading, children }) => {
   return (
-    <div className="instruction-block">
+    <div className="instruction-block" data-cy="instruction-block">
       <h4>{heading}</h4>
       <p>{children}</p>
     </div>
