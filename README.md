@@ -45,7 +45,7 @@ Our application includes the following core functionality:
 
 [Deployed Link](https://witchcraft-tarot.herokuapp.com/)
 
-[Functionality Video](https://vimeo.com/737356776/23ad10896c)
+[Functionality Video](https://vimeo.com/737363654/9e612fbefb)
 
 ## Technologies and Tools
 
